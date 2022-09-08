@@ -2,7 +2,7 @@ package mage.cards.f;
 
 import mage.abilities.Ability;
 import mage.abilities.effects.OneShotEffect;
-import mage.abilities.effects.common.TargetControlledDealsDamageAnyTargetEffect;
+import mage.abilities.effects.common.DamageWithPowerFromOneToAnotherTargetEffect;
 import mage.cards.Card;
 import mage.cards.CardSetInfo;
 import mage.cards.SplitCard;
@@ -37,7 +37,7 @@ public final class FleshBlood extends SplitCard {
 
         // Blood
         // Target creature you control deals damage equal to its power to any target.
-        getRightHalfCard().getSpellAbility().addEffect(new TargetControlledDealsDamageAnyTargetEffect());
+        getRightHalfCard().getSpellAbility().addEffect(new DamageWithPowerFromOneToAnotherTargetEffect());
         getRightHalfCard().getSpellAbility().addTarget(new TargetControlledCreaturePermanent());
         getRightHalfCard().getSpellAbility().addTarget(new TargetAnyTarget());
     }
